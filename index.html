@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VISUAL LAB — Photography Learning</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#" class="logo">VISUAL<span>LAB.</span></a>
+
+        <div class="nav-links">
+            <a href="#learn">Learn</a>
+            <a href="#simulator">Simulator</a>
+            <a href="#composition">Composition</a>
+            <a href="#quiz">Quiz</a>
+        </div>
+
+        <a href="#learn" class="nav-button">Explore ↗</a>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+
+            <p class="eyebrow">THE ART OF SEEING</p>
+
+            <h1>
+                SEE THE WORLD.<br>
+                <span>FRAME THE STORY.</span>
+            </h1>
+
+            <p class="hero-description">
+                Learn photography through an interactive experience.
+                Understand light, master your camera, and create
+                images with intention.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#learn" class="button-primary">
+                    Start Learning ↗
+                </a>
+
+                <a href="#simulator" class="button-secondary">
+                    Try Simulator
+                </a>
+            </div>
+
+            <div class="hero-stats">
+                <div>
+                    <strong>03</strong>
+                    <span>Exposure Controls</span>
+                </div>
+
+                <div>
+                    <strong>05</strong>
+                    <span>Learning Modules</span>
+                </div>
+
+                <div>
+                    <strong>∞</strong>
+                    <span>Creative Possibilities</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="hero-visual">
+            <div class="image-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&q=85"
+                    alt="Kamera fotografi"
+                >
+
+                <div class="image-caption">
+                    <span>01 / PHOTOGRAPHY</span>
+                    <span>Capture the moment.</span>
+                </div>
+
+            </div>
+
+            <div class="floating-label">
+                <span class="status-dot"></span>
+                LIGHT IS EVERYTHING
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="section" id="learn">
+
+            <div class="section-heading">
+                <p class="eyebrow">01 — THE FUNDAMENTALS</p>
+
+                <h2>Understand your camera.</h2>
+
+                <p>
+                    Great photographs begin with understanding
+                    how your camera sees the world.
+                </p>
+            </div>
+
+            <div class="learning-grid">
+
+                <article class="learning-card">
+                    <span class="card-number">01</span>
+                    <div class="card-icon">☀</div>
+
+                    <h3>Exposure Triangle</h3>
+
+                    <p>
+                        Understand the relationship between ISO,
+                        aperture, and shutter speed.
+                    </p>
+
+                    <a href="#simulator">Explore lesson ↗</a>
+                </article>
+
+                <article class="learning-card">
+                    <span class="card-number">02</span>
+                    <div class="card-icon">◉</div>
+
+                    <h3>Composition</h3>
+
+                    <p>
+                        Learn how to arrange subjects and create
+                        a stronger visual story.
+                    </p>
+
+                    <a href="#composition">Explore lesson ↗</a>
+                </article>
+
+                <article class="learning-card">
+                    <span class="card-number">03</span>
+                    <div class="card-icon">◌</div>
+
+                    <h3>Focus & Depth</h3>
+
+                    <p>
+                        Discover focus, background blur, and
+                        depth of field.
+                    </p>
+
+                    <a href="#simulator">Explore lesson ↗</a>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="simulator-section" id="simulator">
+
+            <div class="section-heading">
+                <p class="eyebrow">02 — INTERACTIVE EXPERIENCE</p>
+
+                <h2>Play with the light.</h2>
+
+                <p>
+                    Change your camera settings and explore
+                    how exposure works.
+                </p>
+            </div>
+
+            <div class="simulator">
+
+                <div class="preview-panel">
+
+                    <div class="preview-top">
+                        <span>LIVE PREVIEW</span>
+                        <span class="live-indicator">● SIMULATION</span>
+                    </div>
+
+                    <div class="photo-preview">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1200&q=85"
+                            alt="Pemandangan pegunungan"
+                            id="previewImage"
+                        >
+
+                        <div class="preview-overlay">
+                            <span id="previewISO">ISO 100</span>
+                            <span id="previewAperture">f/2.8</span>
+                            <span id="previewShutter">1/250 s</span>
+                        </div>
+
+                    </div>
+
+                    <div class="exposure-result">
+                        <span>SIMULATED EXPOSURE</span>
+                        <strong id="exposureValue">0.0 EV</strong>
+                    </div>
+
+                    <p class="disclaimer">
+                        Brightness is an educational approximation,
+                        not a calibrated camera preview.
+                    </p>
+
+                </div>
+
+                <div class="controls-panel">
+
+                    <div class="controls-heading">
+                        <h3>Camera Settings</h3>
+
+                        <button id="resetButton" type="button">
+                            Reset ↺
+                        </button>
+                    </div>
+
+                    <div class="control-group">
+
+                        <div class="control-label">
+                            <label for="iso">ISO</label>
+                            <strong id="isoValue">100</strong>
+                        </div>
+
+                        <input
+                            type="range"
+                            id="iso"
+                            min="100"
+                            max="3200"
+                            step="100"
+                            value="100"
+                        >
+
+                        <div class="range-labels">
+                            <span>100 · Clean</span>
+                            <span>3200 · Noisy</span>
+                        </div>
+
+                    </div>
+
+                    <div class="control-group">
+
+                        <div class="control-label">
+                            <label for="aperture">Aperture</label>
+                            <strong id="apertureValue">f/2.8</strong>
+                        </div>
+
+                        <input
+                            type="range"
+                            id="aperture"
+                            min="1.4"
+                            max="16"
+                            step="0.1"
+                            value="2.8"
+                        >
+
+                        <div class="range-labels">
+                            <span>f/1.4 · More light</span>
+                            <span>f/16 · Less light</span>
+                        </div>
+
+                    </div>
+
+                    <div class="control-group">
+
+                        <div class="control-label">
+                            <label for="shutter">Shutter Speed</label>
+                            <strong id="shutterValue">1/250 s</strong>
+                        </div>
+
+                        <input
+                            type="range"
+                            id="shutter"
+                            min="1"
+                            max="1000"
+                            step="1"
+                            value="250"
+                        >
+
+                        <div class="range-labels">
+                            <span>1 s · Slow</span>
+                            <span>1/1000 s · Fast</span>
+                        </div>
+
+                    </div>
+
+                    <div class="tip-box">
+                        <span>✦ PRO TIP</span>
+
+                        <p id="photographyTip">
+                            Start with ISO 100 in bright daylight.
+                            Adjust aperture and shutter speed to
+                            control the amount of light.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section" id="composition">
+
+            <div class="section-heading">
+                <p class="eyebrow">03 — VISUAL STORYTELLING</p>
+
+                <h2>Composition changes everything.</h2>
+
+                <p>
+                    Learn to guide the viewer's eyes through
+                    your photograph.
+                </p>
+            </div>
+
+            <div class="composition-grid">
+
+                <article class="composition-card">
+
+                    <div class="composition-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=900&q=80"
+                            alt="Pemandangan untuk rule of thirds"
+                        >
+
+                        <div class="grid-lines"></div>
+                    </div>
+
+                    <div class="composition-info">
+                        <span>TECHNIQUE 01</span>
+
+                        <h3>Rule of Thirds</h3>
+
+                        <p>
+                            Place important elements near grid
+                            intersections for balanced framing.
+                        </p>
+                    </div>
+
+                </article>
+
+                <article class="composition-card">
+
+                    <div class="composition-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=900&q=80"
+                            alt="Pemandangan dengan garis perspektif"
+                        >
+                    </div>
+
+                    <div class="composition-info">
+                        <span>TECHNIQUE 02</span>
+
+                        <h3>Leading Lines</h3>
+
+                        <p>
+                            Use lines to direct the viewer's
+                            attention toward your subject.
+                        </p>
+                    </div>
+
+                </article>
+
+            </div>
+        </section>
+
+        <section class="quiz-section" id="quiz">
+
+            <p class="eyebrow">04 — TEST YOUR KNOWLEDGE</p>
+
+            <h2>Ready to think like a photographer?</h2>
+
+            <p>
+                Test your understanding of the exposure triangle.
+            </p>
+
+            <div class="quiz-card">
+
+                <span id="questionNumber">QUESTION 01 / 03</span>
+
+                <h3 id="questionText">
+                    Which setting controls the camera sensor's
+                    sensitivity to light?
+                </h3>
+
+                <div id="answerOptions" class="answer-options">
+                    <button data-answer="A">Aperture</button>
+                    <button data-answer="B">ISO</button>
+                    <button data-answer="C">Shutter Speed</button>
+                </div>
+
+                <p id="quizFeedback" aria-live="polite"></p>
+
+                <button
+                    id="nextQuestion"
+                    class="button-primary"
+                    hidden
+                >
+                    Next Question →
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <a href="#" class="logo">VISUAL<span>LAB.</span></a>
+
+        <p>
+            Learn to see differently. Create with intention.
+        </p>
+
+        <span>AN INTERACTIVE PHOTOGRAPHY PROJECT · 2026</span>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
